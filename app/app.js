@@ -1,21 +1,15 @@
 var express = require("express");
 var  app = express();
 var datafile = require("./data/data.json");
+app.use(require("./routers/index"));
+app.use(require("./routers/friends"))
 //var port = 3000;
 
 app.set("port",process.env.PORT||4000);
 
-app.get("/",function(request,response){
-    var info="";
-    datafile.friends.forEach(function(item){
-        info +='<h1>'+ item.title  +'</h1>';
-         
-    });
-    response.send(info);
-});
+
 app.listen(app.get("port"));
 console.log("server is started on port : " + app.get("port"));
- 
 
 
 
