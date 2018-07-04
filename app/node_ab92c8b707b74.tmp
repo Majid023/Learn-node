@@ -1,13 +1,12 @@
 var express = require("express");
 var  app = express();
-var datafile = require("./data/data.json");
 var port = 3000;
 
 app.get("/",function(request,response){
     response.send("<h1>Hii.. I am server.</h1><br/><h1>How are you?</h1>");
 });
 app.listen(port);
-console.log("server is started on port : " + port);
+console.log("server is started on port :" + port);
  
 
 
