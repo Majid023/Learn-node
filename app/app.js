@@ -1,13 +1,20 @@
 var express = require("express");
 var  app = express();
 var datafile = require("./data/data.json");
-var port = 3000;
+//var port = 3000;
+
+app.set("port",process.env.PORT||4000);
 
 app.get("/",function(request,response){
-    response.send("<h1>Hii.. I am server.</h1><br/><h1>How are you?</h1>");
+    var info="";
+    datafile.friends.forEach(function(item){
+        info +='<h1>'+ item.title  +'</h1>';
+         
+    });
+    response.send(info);
 });
-app.listen(port);
-console.log("server is started on port : " + port);
+app.listen(app.get("port"));
+console.log("server is started on port : " + app.get("port"));
  
 
 
