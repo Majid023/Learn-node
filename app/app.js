@@ -5,11 +5,27 @@ app.use(require("./routers/index"));
 app.use(require("./routers/friends"))
 //var port = 3000;
 
+
+app.use(express.static("public"));
 app.set("port",process.env.PORT||4000);
 
 
 app.listen(app.get("port"));
 console.log("server is started on port : " + app.get("port"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

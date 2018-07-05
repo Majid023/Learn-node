@@ -1,7 +1,10 @@
 var express = require("express");
 var router = express.Router();
+
 var datafile = require("../data/data.json");
+
 router.get("/firstName",function(request,response){
+    
     var info="";
     datafile.friends.forEach(function(item){
         info +='<h1>'+ item.firstName +'</h1>';

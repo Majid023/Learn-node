@@ -2,12 +2,9 @@ var express = require("express");
 var router = express.Router();
 
 router.get("/",function(request,response){
-    var info="";
-    datafile.friends.forEach(function(item){
-        info +='<h1>'+ item.title  +'</h1>';
-         
-    });
-    response.send(info);
+
+    response.send('<img alt="img" src="/images/img.jpg" height="400px" width="100%" style="border:3px solid" />');
 });
+
 
 module.exports =  router;
