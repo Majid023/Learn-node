@@ -1,19 +1,21 @@
 var express = require("express");
-var  app = express();
+var app = express();
+var reload = require("reload");
+
 var datafile = require("./data/data.json");
 app.use(require("./routers/index"));
 app.use(require("./routers/friends"))
 //var port = 3000;
 
 
-app.use(express.static("public"));
-app.set("port",process.env.PORT||4000);
+app.use(express.static("app/public"));
+app.set("port", process.env.PORT || 4000);
 
 
-app.listen(app.get("port"));
+var Server = app.listen(app.get("port"));
 console.log("server is started on port : " + app.get("port"));
 
-
+reload(Server,app);
 
 
 
