@@ -4,11 +4,13 @@
   "description": "learning",
   "main": "app/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon -e js,css,ejs,json app/app.js --watch app"
   },
   "author": "Majid",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "reload": "^2.3.0"
   }
 }
