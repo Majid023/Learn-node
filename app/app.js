@@ -10,6 +10,8 @@ app.use(require("./routers/friends"))
 
 app.use(express.static("app/public"));
 app.set("port", process.env.PORT || 4000);
+app.set("view engine","ejs");
+app.set("views","app/views");
 
 
 var Server = app.listen(app.get("port"));
