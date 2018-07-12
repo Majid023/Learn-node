@@ -1,0 +1,34 @@
+{
+    "friends":[{
+                "firstName" : "Majid",
+                "lastName" : "Ansari",
+                "title" : "Ansari",
+                "dateOfBirth" : "03/03/1996",
+                "Qalification" : "BCA"
+               },{
+                "firstName" : "Khalid",
+                "lastName" : "Raza",
+                "title" : "Raza",
+                "dateOfBirth" : "03/05/1996",
+                "Qalification" : "Diploma"  
+               },{
+                "firstName" : "Sujeet",
+                "lastName" : "Kumar",
+                "title" : "Kumar",
+                "dateOfBirth" : "01/03/1996",
+                "Qalification" : "12 pass out"
+               },{
+                "firstName" : "Kalim",
+                "lastName" : "Asraf",
+                "title" : "Kalim",
+                "dateOfBirth" : "01/03/1995",
+                "Qalification" : "MBA"
+               },{
+                "firstName" : "Gupta",
+                "lastName" : "Raju",
+                "title" : "Gupta",
+                "dateOfBirth" : "01/04/1995",
+                "Qalification" : "Diploma"
+               }
+    ]
+}
