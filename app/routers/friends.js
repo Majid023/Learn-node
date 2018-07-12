@@ -1,24 +1,34 @@
 var express = require("express");
 var router = express.Router();
 
-var datafile = require("../data/data.json");
+//var datafile = require("../data/data.json");
 
-router.get("/firstName",function(request,response){
-    
-    var info="";
-    datafile.friends.forEach(function(item){
-        info +='<h1>'+ item.firstName +'</h1>';
-         
+
+
+router.get("/friends",function(request,response){
+
+    var data = request.app.get("appData");
+    var pagefriends = data.friends;
+    response.render("friends",{
+        pageTitle: "Friends Lists",
+        friends : pagefriends,
+        pageId : "friends"
     });
-    response.send(info);
 });
 
 
-router.get("/firstName/:frndID",function(request,response){
-    var info="";
-    var i = datafile.friends[request.params.frndID];
-        info +='<h1>'+ i.firstName +'</h1>';
-    response.send(info);
+router.get("/friends/:frndID",function(request,response){
+    var data = request.app.get("appData");
+    var pagefriends = data.friends;
+    var indexVal =  request.params.frndID;
+   response.render("friend",{
+       pageTitle : "friend",
+       pageId : "friend",
+       index :indexVal,
+       friends : pagefriends
+
+   })
+   
 });
 
 module.exports = router;

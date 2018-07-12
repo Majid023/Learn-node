@@ -237,3 +237,28 @@ a {
     margin-left: 55%;
   
   }
+  #tabledata{
+    width:100%;
+  }
+ #tabledata,tr, th, td {
+padding:10px;
+text-align: center;
+border:1px solid black;
+ }
+ th{
+   color:red;
+   font-size:20px;
+ }
+ tr:nth-child(odd){
+   background-color:rgb(97, 39, 97);
+   color:white;
+ }
+ tr:hover{
+   background-color:blueviolet;
+ }
+ td:hover{
+   background-color: aqua;
+   color:black;
+   font-size:18px;
+   font-weight: bold;
+ }

@@ -3,7 +3,10 @@ var router = express.Router();
 
 router.get("/",function(request,response){
 
-    response.render("index");
+    response.render("index",{
+        pageTitle: "Home",
+        pageId : "home" 
+    });
 });
 
 

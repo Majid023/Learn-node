@@ -4,14 +4,19 @@ var reload = require("reload");
 
 var datafile = require("./data/data.json");
 app.use(require("./routers/index"));
-app.use(require("./routers/friends"))
+app.use(require("./routers/friends"));
+app.use(require("./routers/makeimage"));
 //var port = 3000;
 
 
 app.use(express.static("app/public"));
+
 app.set("port", process.env.PORT || 4000);
+app.set("appData",datafile);
 app.set("view engine","ejs");
 app.set("views","app/views");
+
+app.locals.siteTitle = "sYesIm";
 
 
 var Server = app.listen(app.get("port"));
